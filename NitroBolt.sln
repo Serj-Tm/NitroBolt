@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NitroBolt.Functional", "NitroBolt.Functional\NitroBolt.Functional.csproj", "{70545804-0DE4-4425-A2BD-C964B040A396}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NitroBolt.Qs", "NitroBolt.Qs\NitroBolt.Qs.csproj", "{D3872DD6-39FB-4F22-819F-3F5F5C88D0E6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NitroBolt.QSharp", "NitroBolt.QSharp\NitroBolt.QSharp.csproj", "{D3872DD6-39FB-4F22-819F-3F5F5C88D0E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

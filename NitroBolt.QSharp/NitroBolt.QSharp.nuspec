@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>NitroBolt.QSharp</id>
+    <version>1.0.0</version>
+    <title>NitroBolt.QSharp</title>
+    <authors>Serj-Tm</authors>
+    <owners>Serj-Tm</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>NitroBolt.QSharp</description>
+    <copyright>Copyright © 2015</copyright>
+  </metadata>
+</package>

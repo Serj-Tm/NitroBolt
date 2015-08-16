@@ -9,7 +9,7 @@ namespace NitroBolt.QSharp
 {
   public struct QNode
   {
-    public QNode(object value, IEnumerable<QNode> nodes)
+    public QNode(object value, IEnumerable<QNode> nodes = null)
     {
       this.Value = value;
       this.Nodes = nodes.OrEmpty();

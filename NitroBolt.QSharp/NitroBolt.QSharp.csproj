@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NitroBolt.Functional, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NitroBolt.Functional.1.0.2\lib\net45\NitroBolt.Functional.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,13 +49,8 @@
     <Compile Include="QNodeHlp.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NitroBolt.Functional\NitroBolt.Functional.csproj">
-      <Project>{70545804-0de4-4425-a2bd-c964b040a396}</Project>
-      <Name>NitroBolt.Functional</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="NitroBolt.QSharp.nuspec" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

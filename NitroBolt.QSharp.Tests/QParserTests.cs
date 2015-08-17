@@ -21,7 +21,7 @@ namespace NitroBolt.QSharp.Tests
     }
     [TestMethod]
     [ExpectedException(typeof(Exception))]
-    [Ignore]
+    //[Ignore]
     public void QParser_MissedBracket()
     {
       var qs = QParser.Parse("div{x, 1");

@@ -33,6 +33,8 @@ namespace NitroBolt.QSharp
           if (index >= text.Length)
           {
             PopWhileSingle();
+            if (stack.Count > 0)
+              throw new Exception($"Не хватает закрывающихся скобок - '{stack.Count}' шт.");
 
             return info.allElements;
           }

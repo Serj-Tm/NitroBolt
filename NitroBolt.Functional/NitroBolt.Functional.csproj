@@ -43,6 +43,7 @@
     <Compile Include="ArrayHelper.cs" />
     <Compile Include="CollectionHelper.cs" />
     <Compile Include="CollectionHelper.SplitByCount.cs" />
+    <Compile Include="ConvertHlp.cs" />
     <Compile Include="ObjectHelper.cs" />
     <Compile Include="DictionaryHelper.cs" />
     <Compile Include="ExceptionHelper.cs" />

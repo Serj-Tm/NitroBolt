@@ -7,7 +7,7 @@
     <authors>Serj-Tm</authors>
     <owners>Serj-Tm</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>NitroBolt.Functional</description>
+    <description>NitroBolt.Immutable</description>
     <copyright>Copyright © 2015</copyright>
   </metadata>
 </package>

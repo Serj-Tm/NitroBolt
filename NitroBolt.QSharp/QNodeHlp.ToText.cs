@@ -8,23 +8,17 @@ namespace NitroBolt.QSharp
 {
     partial class QNodeHlp
     {
-        public static string ToText(this QNode? root)
-        {
-            if (root == null)
-                return null;
-            return ToText(new[] { root.Value });
-        }
 
         public static string ToText(this QNode root)
         {
-            return ToText(new[] { root });
+            return ToText(Enumerable.Repeat(root, root != null ? 1 : 0));
         }
 
-        public static string ToText(this QNode[] roots)
+        public static string ToText(this IEnumerable<QNode> roots)
         {
             if (roots == null)
                 return null;
-            if (roots.Length == 0)
+            if (!roots.Any())
                 return "";
 
             var culture = System.Threading.Thread.CurrentThread.CurrentCulture;
@@ -35,7 +29,7 @@ namespace NitroBolt.QSharp
                 var stack = new Stack<QNode[]>();
                 var i_stack = new Stack<int>();
 
-                var qs = roots;
+                var qs = roots.ToArray();
                 var i = 0;
 
                 var builder = new StringBuilder();

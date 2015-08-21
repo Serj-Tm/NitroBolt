@@ -10,10 +10,6 @@ namespace NitroBolt.QSharp
   {
     public static string AsString(this QNode node)
     {
-      return node.Value?.ToString();
-    }
-    public static string AsString(this QNode? node)
-    {
       return node?.Value?.ToString();
     }
   }

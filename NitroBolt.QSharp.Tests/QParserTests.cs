@@ -14,7 +14,7 @@ namespace NitroBolt.QSharp.Tests
       Assert.IsNotNull(qs);
       Assert.AreEqual(1, qs.Length);
       var q = qs.FirstOrDefault();
-      Assert.AreEqual("div", q.Value?.ToString());
+      Assert.AreEqual("div", q?.Value?.ToString());
       Assert.AreEqual(2, q.Nodes.Count());
       Assert.AreEqual("x", q.Nodes.ElementAtOrDefault(0).AsString());
       Assert.AreEqual("1", q.Nodes.ElementAtOrDefault(1).AsString());

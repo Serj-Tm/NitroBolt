@@ -30,8 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NitroBolt.Functional, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NitroBolt.Functional.1.0.2\lib\net45\NitroBolt.Functional.dll</HintPath>
+    <Reference Include="NitroBolt.Functional, Version=1.0.17.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NitroBolt.Functional.1.0.17\lib\net45\NitroBolt.Functional.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

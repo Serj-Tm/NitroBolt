@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NitroBolt.QSharp
 {
-  public static class QNodeHlp
+  public static partial class QNodeHlp
   {
     public static string AsString(this QNode node)
     {

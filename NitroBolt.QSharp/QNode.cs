@@ -18,6 +18,11 @@ namespace NitroBolt.QSharp
         public readonly object Value;
         public readonly IEnumerable<QNode> Nodes;
 
+        public override string ToString()
+        {
+            return this.ToText();
+        }
+
         //public static bool operator == (QNode q1, QNode q2) => q1.Value == q2.Value && q1.Nodes == q2.Nodes;
         //public static bool operator !=(QNode q1, QNode q2) => q1.Value != q2.Value || q1.Nodes != q2.Nodes;
 

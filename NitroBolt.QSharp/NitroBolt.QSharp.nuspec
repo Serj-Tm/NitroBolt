@@ -9,5 +9,6 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>NitroBolt.QSharp</description>
     <copyright>Copyright © 2015</copyright>
+    <projectUrl>https://github.com/Serj-Tm/NitroBolt</projectUrl>
   </metadata>
 </package>

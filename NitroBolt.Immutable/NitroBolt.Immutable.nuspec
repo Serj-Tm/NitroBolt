@@ -9,5 +9,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>NitroBolt.Immutable</description>
     <copyright>Copyright © 2015</copyright>
+    <projectUrl>https://github.com/Serj-Tm/NitroBolt</projectUrl>
+    <tags>C# Immutable</tags>
   </metadata>
 </package>

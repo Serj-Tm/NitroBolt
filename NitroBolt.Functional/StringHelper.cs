@@ -7,9 +7,9 @@ namespace NitroBolt.Functional
 {
   static public partial class StringHelper
   {
-    public static string JoinToString(this IEnumerable<string> items, string separator)
+    public static string JoinToString(this IEnumerable<string> items, string separator = null)
     {
-      return string.Join(separator, items.ToArray());
+      return string.Join(separator, items);
     }
 
     public static bool IsNullOrEmpty(this string value)

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NitroBolt.QSharp", "NitroBo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NitroBolt.QSharp.Tests", "NitroBolt.QSharp.Tests\NitroBolt.QSharp.Tests.csproj", "{6D4E7DD4-6B7C-43BD-8C8F-58BA9E553EDF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NitroBolt.Immutable", "NitroBolt.Immutable\NitroBolt.Immutable.csproj", "{4456C9FE-1E48-438E-9018-0666B1E89932}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{6D4E7DD4-6B7C-43BD-8C8F-58BA9E553EDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D4E7DD4-6B7C-43BD-8C8F-58BA9E553EDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D4E7DD4-6B7C-43BD-8C8F-58BA9E553EDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4456C9FE-1E48-438E-9018-0666B1E89932}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4456C9FE-1E48-438E-9018-0666B1E89932}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4456C9FE-1E48-438E-9018-0666B1E89932}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4456C9FE-1E48-438E-9018-0666B1E89932}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

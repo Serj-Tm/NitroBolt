@@ -184,22 +184,22 @@ namespace NitroBolt.QSharp
     class ParseInfo
     {
       public List<QNode> prevElements = new List<QNode>();
-      public QNode? current;
+      public QNode current;
       public QNode[] allElements
       {
         get
         {
           if (current == null)
             return prevElements.ToArray();
-          return prevElements.Concat(new[] { current.Value }).ToArray();
+          return prevElements.Concat(Enumerable.Repeat(current, 1)).ToArray();
         }
       }
       public bool isSingle = false;
 
-      public void PushCurrent(QNode? newCurrent)
+      public void PushCurrent(QNode newCurrent)
       {
         if (current != null)
-          prevElements.Add(current.Value);
+          prevElements.Add(current);
         current = newCurrent;
       }
       public void PushChild(ParseInfo info)
@@ -207,8 +207,7 @@ namespace NitroBolt.QSharp
         var parentInfo = this;
         if (parentInfo.current != null)
         {
-          var parentCurrent = parentInfo.current.Value;
-          parentInfo.current = new QNode(parentCurrent.Value, parentCurrent.Nodes.Concat(info.allElements).ToArray());
+          parentInfo.current = new QNode(parentInfo.current.Value, parentInfo.current.Nodes.Concat(info.allElements).ToArray());
         }
         else
         {

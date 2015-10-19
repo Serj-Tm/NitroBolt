@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D3872DD6-39FB-4F22-819F-3F5F5C88D0E6}</ProjectGuid>
+    <ProjectGuid>{4456C9FE-1E48-438E-9018-0666B1E89932}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NitroBolt.QSharp</RootNamespace>
-    <AssemblyName>NitroBolt.QSharp</AssemblyName>
+    <RootNamespace>NitroBolt.Immutable</RootNamespace>
+    <AssemblyName>NitroBolt.Immutable</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,11 +30,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NitroBolt.Functional, Version=1.0.17.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NitroBolt.Functional.1.0.17\lib\net45\NitroBolt.Functional.dll</HintPath>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.1.36.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.1.36\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,14 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="QNode.cs" />
+    <Compile Include="Immutable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QNodeHlp.cs" />
-    <Compile Include="QNodeHlp.ToText.cs" />
-    <Compile Include="QParser.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="NitroBolt.QSharp.nuspec" />
+    <None Include="NitroBolt.Immutable.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

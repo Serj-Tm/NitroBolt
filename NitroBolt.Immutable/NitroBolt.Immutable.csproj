@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Immutable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="NitroBolt.Immutable.nuspec" />

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NitroBolt.Functional", "NitroBolt.Functional\NitroBolt.Functional.csproj", "{70545804-0DE4-4425-A2BD-C964B040A396}"
 EndProject
@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NitroBolt.QSharp", "NitroBo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NitroBolt.QSharp.Tests", "NitroBolt.QSharp.Tests\NitroBolt.QSharp.Tests.csproj", "{6D4E7DD4-6B7C-43BD-8C8F-58BA9E553EDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NitroBolt.Immutable", "NitroBolt.Immutable\NitroBolt.Immutable.csproj", "{4456C9FE-1E48-438E-9018-0666B1E89932}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NitroBolt.Immutable", "NitroBolt.Immutable\NitroBolt.Immutable.csproj", "{446BEFF5-7E79-4561-89A9-65B5EA27CF96}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,12 +29,15 @@ Global
 		{6D4E7DD4-6B7C-43BD-8C8F-58BA9E553EDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D4E7DD4-6B7C-43BD-8C8F-58BA9E553EDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D4E7DD4-6B7C-43BD-8C8F-58BA9E553EDF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4456C9FE-1E48-438E-9018-0666B1E89932}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4456C9FE-1E48-438E-9018-0666B1E89932}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4456C9FE-1E48-438E-9018-0666B1E89932}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4456C9FE-1E48-438E-9018-0666B1E89932}.Release|Any CPU.Build.0 = Release|Any CPU
+		{446BEFF5-7E79-4561-89A9-65B5EA27CF96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{446BEFF5-7E79-4561-89A9-65B5EA27CF96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{446BEFF5-7E79-4561-89A9-65B5EA27CF96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{446BEFF5-7E79-4561-89A9-65B5EA27CF96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D321C197-FB45-4CB6-905A-5E2239079694}
 	EndGlobalSection
 EndGlobal

@@ -12,7 +12,7 @@ namespace NitroBolt.Functional
     {
       try
       {
-        if (value == null || value is DBNull)
+        if (value == null)
           return null;
         if (value is string)
         {
@@ -33,7 +33,7 @@ namespace NitroBolt.Functional
     {
       try
       {
-        if (value == null || value is DBNull)
+        if (value == null)
           return null;
         if (value is Guid)
           return (Guid)value;
@@ -60,7 +60,7 @@ namespace NitroBolt.Functional
     {
       try
       {
-        if (value == null || value == DBNull.Value)
+        if (value == null)
           return null;
         return Convert.ToInt32(value);
       }
@@ -75,7 +75,7 @@ namespace NitroBolt.Functional
     {
       try
       {
-        if (value == null || value == DBNull.Value)
+        if (value == null)
           return null;
         return Convert.ToInt64(value);
       }

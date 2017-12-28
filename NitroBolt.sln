@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NitroBolt.Functional", "NitroBolt.Functional\NitroBolt.Functional.csproj", "{70545804-0DE4-4425-A2BD-C964B040A396}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NitroBolt.QSharp", "NitroBolt.QSharp\NitroBolt.QSharp.csproj", "{D3872DD6-39FB-4F22-819F-3F5F5C88D0E6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NitroBolt.QSharp.Tests", "NitroBolt.QSharp.Tests\NitroBolt.QSharp.Tests.csproj", "{6D4E7DD4-6B7C-43BD-8C8F-58BA9E553EDF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NitroBolt.Immutable", "NitroBolt.Immutable\NitroBolt.Immutable.csproj", "{446BEFF5-7E79-4561-89A9-65B5EA27CF96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NitroBolt.Functional", "NitroBolt.Functional\NitroBolt.Functional.csproj", "{681AF12B-8D15-499E-8746-4FB0252D4AA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{70545804-0DE4-4425-A2BD-C964B040A396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{70545804-0DE4-4425-A2BD-C964B040A396}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{70545804-0DE4-4425-A2BD-C964B040A396}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{70545804-0DE4-4425-A2BD-C964B040A396}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D3872DD6-39FB-4F22-819F-3F5F5C88D0E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D3872DD6-39FB-4F22-819F-3F5F5C88D0E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3872DD6-39FB-4F22-819F-3F5F5C88D0E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{446BEFF5-7E79-4561-89A9-65B5EA27CF96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{446BEFF5-7E79-4561-89A9-65B5EA27CF96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{446BEFF5-7E79-4561-89A9-65B5EA27CF96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{681AF12B-8D15-499E-8746-4FB0252D4AA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{681AF12B-8D15-499E-8746-4FB0252D4AA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{681AF12B-8D15-499E-8746-4FB0252D4AA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{681AF12B-8D15-499E-8746-4FB0252D4AA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

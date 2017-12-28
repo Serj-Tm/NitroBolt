@@ -212,16 +212,16 @@ namespace NitroBolt.Functional
       return Load<DataStorage<T>>(stream).Items;
     }
 
-    public static T LoadFromResource<T>(Type resourceMarkerType, string name)
-    {
-      using (Stream stream = resourceMarkerType.Assembly.GetManifestResourceStream(resourceMarkerType, name))
-      {
-        if (stream == null)
-          throw new Exception(string.Format("Не найден ресурс '{1}' (тип-маркер: '{0}')",
-            resourceMarkerType.FullName, name));
-        return Load<T>(stream);
-      }
-    }
+    //public static T LoadFromResource<T>(Type resourceMarkerType, string name)
+    //{
+    //  using (Stream stream = resourceMarkerType.Assembly.GetManifestResourceStream(resourceMarkerType, name))
+    //  {
+    //    if (stream == null)
+    //      throw new Exception(string.Format("Не найден ресурс '{1}' (тип-маркер: '{0}')",
+    //        resourceMarkerType.FullName, name));
+    //    return Load<T>(stream);
+    //  }
+    //}
 
     public static object Load(Type objectType, string filename)
     {

@@ -3,6 +3,13 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.4</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>NitroBolt.Immutable</Description>
+    <Copyright>Copyright © 2015</Copyright>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/Serj-Tm/NitroBolt</PackageProjectUrl>
+    <PackageTags>C# Immutable</PackageTags>
+    <Authors>Serj-Tm</Authors>
+    <Company>NitroBolt</Company>
   </PropertyGroup>
 
   <ItemGroup>

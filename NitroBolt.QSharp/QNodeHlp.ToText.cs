@@ -21,10 +21,10 @@ namespace NitroBolt.QSharp
             if (!roots.Any())
                 return "";
 
-            var culture = System.Threading.Thread.CurrentThread.CurrentCulture;
-            try
-            {
-                System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.InvariantCulture;
+            //var culture = System.Threading.Thread.CurrentThread.CurrentCulture;
+            //try
+            //{
+            //    System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.InvariantCulture;
 
                 var stack = new Stack<QNode[]>();
                 var i_stack = new Stack<int>();
@@ -113,11 +113,11 @@ namespace NitroBolt.QSharp
                         builder.AppendLine();
                 }
                 return builder?.ToString();
-            }
-            finally
-            {
-                System.Threading.Thread.CurrentThread.CurrentCulture = culture;
-            }
+            //}
+            //finally
+            //{
+            //    System.Threading.Thread.CurrentThread.CurrentCulture = culture;
+            //}
         }
 
         static string[] Prefixes = Enumerable.Range(0, 100).Select(i => new string(' ', i * 2)).ToArray();
@@ -133,11 +133,13 @@ namespace NitroBolt.QSharp
             return prefixes[level];
         }
 
-        static readonly System.Globalization.CultureInfo RuCulture = System.Globalization.CultureInfo.GetCultureInfo("ru-Ru");
+        static readonly System.Globalization.CultureInfo RuCulture = new System.Globalization.CultureInfo("ru-Ru");
         static string ValueToText(object value)
         {
             if (value is DateTime)
                 return ((DateTime)value).ToString(RuCulture);
+            if (value is IFormattable)
+                return ((IFormattable)value).ToString(null, System.Globalization.CultureInfo.InvariantCulture);
             return value.ToString();
         }
     }

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Serj-Tm</Authors>
+    <Company>NitroBolt</Company>
+    <Description>Qss format utilities</Description>
+    <Copyright>Copyright © 2017</Copyright>
+    <PackageProjectUrl>https://github.com/Serj-Tm/NitroBolt</PackageProjectUrl>
+    <PackageTags>Qss Format</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NitroBolt.QSharp" Version="1.0.42" />
+  </ItemGroup>
+
+</Project>

@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NitroBolt.QSharp", "NitroBo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NitroBolt.QSharp.Tests", "NitroBolt.QSharp.Tests\NitroBolt.QSharp.Tests.csproj", "{F43594E6-E8F7-49FA-870C-830C15D54666}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NitroBolt.Qss", "NitroBolt.Qss\NitroBolt.Qss.csproj", "{04001B6D-95FD-495E-BAC6-990685F35C74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NitroBolt.Qss.Tests", "NitroBolt.Qss.Tests\NitroBolt.Qss.Tests.csproj", "{DC3BB2ED-45FC-4E61-86E0-E17389F7D09D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{F43594E6-E8F7-49FA-870C-830C15D54666}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F43594E6-E8F7-49FA-870C-830C15D54666}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F43594E6-E8F7-49FA-870C-830C15D54666}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04001B6D-95FD-495E-BAC6-990685F35C74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04001B6D-95FD-495E-BAC6-990685F35C74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04001B6D-95FD-495E-BAC6-990685F35C74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04001B6D-95FD-495E-BAC6-990685F35C74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC3BB2ED-45FC-4E61-86E0-E17389F7D09D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC3BB2ED-45FC-4E61-86E0-E17389F7D09D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC3BB2ED-45FC-4E61-86E0-E17389F7D09D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC3BB2ED-45FC-4E61-86E0-E17389F7D09D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

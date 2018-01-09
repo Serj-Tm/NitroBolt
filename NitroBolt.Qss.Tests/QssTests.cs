@@ -14,7 +14,7 @@ namespace NitroBolt.Qss.Tests
     public class QssTests
     {
         [TestMethod]
-        public void Qss_OperatorTest()
+        public void Qss_ArrowCollapseTest()
         {
             var text = "1 '->' 2";
             var nodes = QParser.Parse(text);
@@ -24,6 +24,22 @@ namespace NitroBolt.Qss.Tests
             Assert.AreEqual("->", collapsed[0]?.Value);
             Assert.AreEqual("1", collapsed[0]?.Nodes?.ElementAtOrDefault(0)?.Value);
             Assert.AreEqual("2", collapsed[0]?.Nodes?.ElementAtOrDefault(1)?.Value);
+        }
+        [TestMethod]
+        public void Qss_ArrowCollapseChildTest()
+        {
+            var text = @"
+'-'
+ {1 '->' 2}
+";
+            var nodes = QParser.Parse(text);
+
+            var collapsed = TreeProcess(nodes, ArrowCollapse).ToArray();
+            var root = collapsed[0];
+            var childs = root?.Nodes?.ToArray();
+            Assert.AreEqual("->", childs[0]?.Value);
+            Assert.AreEqual("1", childs[0]?.Nodes?.ElementAtOrDefault(0)?.Value);
+            Assert.AreEqual("2", childs[0]?.Nodes?.ElementAtOrDefault(1)?.Value);
         }
 
     }

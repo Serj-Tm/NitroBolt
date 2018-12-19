@@ -7,7 +7,7 @@ using System.Xml;
 using System.Xml.Serialization;
 using System.Linq;
 
-namespace NitroBolt.Functional
+namespace NitroBolt.Xml.Serialization
 {
   public class XmlSerialization
   {

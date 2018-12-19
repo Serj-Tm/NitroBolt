@@ -5,10 +5,14 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Serj-Tm</Authors>
     <Company>NitroBolt</Company>
-    <Description>NitroBolt.Functional</Description>
-    <Copyright>Copyright © 2015</Copyright>
+    <Description>NitroBolt.Xml.Serialization</Description>
+    <Copyright>Copyright © 2018</Copyright>
     <PackageProjectUrl>https://github.com/Serj-Tm/NitroBolt</PackageProjectUrl>
-    <PackageTags>C# Functional</PackageTags>
+    <PackageTags>C# Xml Serialization</PackageTags>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Xml.XmlSerializer" Version="4.3.0" />
+  </ItemGroup>
 
 </Project>

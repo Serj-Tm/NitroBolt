@@ -1,22 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics.CodeAnalysis;
 
 namespace NitroBolt.Functional.Maybe
 {
     public static class MaybeHelper
     {
         [System.Diagnostics.DebuggerStepThrough]
-        public static TValue Maybe<TItem, TValue>(this TItem item, Func<TItem, TValue> f)
+        [return: MaybeNull]
+        public static TValue Maybe<TItem, TValue>([AllowNull] this TItem item, Func<TItem, TValue>? f)
         {
             if (item == null || f == null)
-                return default(TValue);
+                return default;
             return f(item);
         }
         [System.Diagnostics.DebuggerStepThrough]
-        public static TValue? MaybeValue<TItem, TValue>(this TItem item, Func<TItem, TValue> f)
+        public static TValue? MaybeValue<TItem, TValue>([AllowNull] this TItem item, Func<TItem, TValue>? f)
           where TValue : struct
         {
             if (item == null || f == null)
@@ -24,7 +22,7 @@ namespace NitroBolt.Functional.Maybe
             return f(item);
         }
         [System.Diagnostics.DebuggerStepThrough]
-        public static void Maybe<TItem>(this TItem item, Action<TItem> action)
+        public static void Maybe<TItem>([AllowNull] this TItem item, Action<TItem>? action)
         {
             if (item == null || action == null)
                 return;

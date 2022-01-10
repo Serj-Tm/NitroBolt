@@ -1,48 +1,47 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NitroBolt.Functional
 {
-  public static partial class CollectionHelper
+    public static partial class CollectionHelper
   {
     [System.Diagnostics.DebuggerStepThrough]
-    public static IEnumerable<TItem> OrEmpty<TItem>(this IEnumerable<TItem> items)
+    public static IEnumerable<TItem> OrEmpty<TItem>(this IEnumerable<TItem>? items)
     {
       return items ?? EmptyCollection<TItem>.Empty;
     }
 
     [System.Diagnostics.DebuggerStepThrough]
-    public static ICollection<TItem> OrEmpty<TItem>(this ICollection<TItem> items)
+    public static ICollection<TItem> OrEmpty<TItem>(this ICollection<TItem>? items)
     {
       return items ?? EmptyCollection<TItem>.Empty;
     }
-    public static IList<TItem> OrEmpty<TItem>(this IList<TItem> items)
+    public static IList<TItem> OrEmpty<TItem>(this IList<TItem>? items)
     {
       if (items == null)
         return Array<TItem>.Empty;
       return items;
     }
-    public static TItem[] OrEmpty<TItem>(this TItem[] items)
+    public static TItem[] OrEmpty<TItem>(this TItem[]? items)
     {
       if (items == null)
         return Array<TItem>.Empty;
       return items;
     }
-    public static List<TItem> OrEmpty<TItem>(this List<TItem> items)
+    public static List<TItem> OrEmpty<TItem>(this List<TItem>? items)
     {
       if (items == null)
         return new List<TItem>();
       return items;
     }
 
-    public static T MinObject<T>(this IEnumerable<T> items, Func<T, IComparable> keyer) where T : class
+    public static T? MinObject<T>(this IEnumerable<T> items, Func<T, IComparable> keyer) where T : class
     {
-      IComparable min = null;
-      T minItem = null;
+      IComparable? min = null;
+      T? minItem = null;
       foreach (var item in items)
       {
         var value = keyer(item);
@@ -56,7 +55,7 @@ namespace NitroBolt.Functional
     }
     public static T? MinValue<T>(this IEnumerable<T> items, Func<T, IComparable> keyer) where T : struct
     {
-      IComparable min = null;
+      IComparable? min = null;
       T? minItem = null;
       foreach (var item in items)
       {
@@ -70,10 +69,10 @@ namespace NitroBolt.Functional
       return minItem;
     }
 
-    public static T MaxObject<T>(this IEnumerable<T> items, Func<T, IComparable> keyer) where T : class
+    public static T? MaxObject<T>(this IEnumerable<T> items, Func<T, IComparable> keyer) where T : class
     {
-      IComparable max = null;
-      T maxItem = null;
+      IComparable? max = null;
+      T? maxItem = null;
       foreach (var item in items)
       {
         var value = keyer(item);
@@ -87,7 +86,7 @@ namespace NitroBolt.Functional
     }
     public static T? MaxValue<T>(this IEnumerable<T> items, Func<T, IComparable> keyer) where T : struct
     {
-      IComparable max = null;
+      IComparable? max = null;
       T? maxItem = null;
       foreach (var item in items)
       {
@@ -121,11 +120,11 @@ namespace NitroBolt.Functional
           rightMarkers[key] = true;
         }
         else
-          yield return result(left, default(TRight));
+          yield return result(left, default!);
       }
       foreach (var right in rights.Where(_right => !rightMarkers.ContainsKey(rightKeyer(_right))))
       {
-        yield return result(default(TLeft), right);
+        yield return result(default!, right);
       }
     }
 
@@ -140,7 +139,7 @@ namespace NitroBolt.Functional
         {
           if (!object.Equals(prevKey, key))
           {
-            yield return new SplitGroup<T, TKey>(prevKey, prevs.ToArray());
+            yield return new SplitGroup<T, TKey>(prevKey!, prevs.ToArray());
             prevs.Clear();
             prevKey = key;
           }
@@ -152,17 +151,18 @@ namespace NitroBolt.Functional
         prevs.Add(item);
       }
       if (prevs.Count > 0)
-        yield return new SplitGroup<T, TKey>(prevKey, prevs.ToArray());
+        yield return new SplitGroup<T, TKey>(prevKey!, prevs.ToArray());
     }
   }
 
   public class SplitGroup<T, TKey>
   {
-    public SplitGroup(TKey key, T[] items)
+    public SplitGroup([AllowNull]TKey key, T[] items)
     {
       this.Key = key;
       this.Items = items;
     }
+    [AllowNull]
     public readonly TKey Key;
     public readonly T[] Items;
   }

@@ -1,25 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace NitroBolt.Functional
 {
   static public partial class StringHelper
   {
-    public static string JoinToString(this IEnumerable<string> items, string separator = null)
+    public static string JoinToString(this IEnumerable<string> items, string? separator = null)
     {
       return string.Join(separator, items);
     }
 
-    public static bool IsNullOrEmpty(this string value)
+    public static bool IsNullOrEmpty(this string? value)
     {
       return string.IsNullOrEmpty(value);
     }
     /// <summary>
     /// Пустая строка ("") преобразуется в null-строку(null)
     /// </summary>
-    public static string EmptyAsNull(this string value)
+    public static string? EmptyAsNull(this string value)
     {
       if (value == "")
         return null;
@@ -27,7 +25,7 @@ namespace NitroBolt.Functional
     }
 
 
-    public static string OrEmpty(this string s)
+    public static string OrEmpty(this string? s)
     {
       return s ?? "";
     }

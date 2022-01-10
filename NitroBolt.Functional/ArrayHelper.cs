@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 
@@ -17,7 +18,7 @@ namespace NitroBolt.Functional
     }
 
     [System.Diagnostics.DebuggerStepThrough]
-    public static bool Any<T>(this T[] arr, Func<T, bool> f)
+    public static bool Any<T>(this T[]? arr, Func<T, bool> f)
     {
       if (arr == null)
         return false;
@@ -28,15 +29,16 @@ namespace NitroBolt.Functional
     }
 
     [System.Diagnostics.DebuggerStepThrough]
-    public static bool Any<T>(this T[] items)
+    public static bool Any<T>(this T[]? items)
     {
       return items != null && items.Length > 0;
     }
     [System.Diagnostics.DebuggerStepThrough]
-    public static T FirstOrDefault<T>(this T[] items)
+    [return: MaybeNull]
+    public static T FirstOrDefault<T>(this T[]? items)
     {
       if (items == null || items.Length == 0)
-        return default(T);
+        return default;
       return items[0];
     }
     [System.Diagnostics.DebuggerStepThrough]
@@ -45,17 +47,19 @@ namespace NitroBolt.Functional
       return items[0];
     }
     [System.Diagnostics.DebuggerStepThrough]
-    public static T LastOrDefault<T>(this T[] items)
+    [return: MaybeNull]
+    public static T LastOrDefault<T>(this T[]? items)
     {
       if (items == null || items.Length == 0)
-        return default(T);
-      return items[items.Length - 1];
+        return default;
+      return items[^1];
     }
     [System.Diagnostics.DebuggerStepThrough]
-    public static T ElementAtOrDefault<T>(this T[] items, int index)
+    [return: MaybeNull]
+    public static T ElementAtOrDefault<T>(this T[]? items, int index)
     {
       if (items == null || index < 0 || index >= items.Length)
-        return default(T);
+        return default;
       return items[index];
     }
 

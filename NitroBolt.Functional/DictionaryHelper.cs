@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace NitroBolt.Functional
 {
@@ -9,7 +6,7 @@ namespace NitroBolt.Functional
   {
 // ReSharper disable CompareNonConstrainedGenericWithNull
     [System.Diagnostics.DebuggerStepThrough]
-    public static TValue Find<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, TKey key) where TValue : class
+    public static TValue? Find<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, TKey key) where TValue : class
     {
       if (key != null && dictionary != null)
 
@@ -18,7 +15,7 @@ namespace NitroBolt.Functional
         if (dictionary.TryGetValue(key, out value))
           return value;
       }
-      return default(TValue);
+      return default;
     }
     [System.Diagnostics.DebuggerStepThrough]
     public static TValue? FindValue<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, TKey key) where TValue : struct

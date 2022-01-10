@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Diagnostics.CodeAnalysis;
 
 namespace NitroBolt.Functional
 {
-  public static class ObjectHelper
+    public static class ObjectHelper
   {
     /// <summary>
     /// Используется вместо ??, т.к. у операции ?? низкий приоритет, и приходится неудобные скобки расставлять
@@ -29,11 +26,12 @@ namespace NitroBolt.Functional
     /// <summary>
     /// Используется вместо as, т.к. у операции as низкий приоритет, и приходится неудобные скобки расставлять
     /// </summary>
-    public static TItem As<TItem>(this object item) //where TItem : class
+    [return: MaybeNull]
+    public static TItem As<TItem>(this object? item) //where TItem : class
     {
       if (item is TItem)
-        return (TItem) item;
-      return default(TItem);
+        return (TItem)item;
+      return default;
     }
 
 

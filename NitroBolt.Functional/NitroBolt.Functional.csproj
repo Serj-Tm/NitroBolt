@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Serj-Tm</Authors>
     <Company>NitroBolt</Company>
@@ -9,6 +9,7 @@
     <Copyright>Copyright © 2015</Copyright>
     <PackageProjectUrl>https://github.com/Serj-Tm/NitroBolt</PackageProjectUrl>
     <PackageTags>C# Functional</PackageTags>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
 </Project>

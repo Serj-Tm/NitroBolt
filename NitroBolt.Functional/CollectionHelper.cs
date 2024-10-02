@@ -99,12 +99,6 @@ namespace NitroBolt.Functional
       }
       return maxItem;
     }
-    public static IEnumerable<TItem> DistinctBy<TItem, TKey>(this IEnumerable<TItem> items, Func<TItem, TKey> keyer)
-    {
-      return items
-        .GroupBy(keyer)
-        .Select(group => group.First());
-    }
 
     public static IEnumerable<TResult> OuterJoin<TLeft, TRight, TKey, TResult>(this IEnumerable<TLeft> lefts, IEnumerable<TRight> rights, Func<TLeft, TKey> leftKeyer, Func<TRight, TKey> rightKeyer, Func<TLeft, TRight, TResult> result)
     {
